@@ -1,14 +1,5 @@
 #cloud-config
 
-packages:
-  - apt-transport-https
-  - ca-certificates
-  - curl
-  - gnupg-agent
-  - software-properties-common
-  - whois
-package_update: true
-
 # create the docker group
 groups:
   - docker

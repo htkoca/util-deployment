@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 sudo echo "superuser check" || exit 1
+
 echo "y" | sudo ufw reset
 sudo ufw default allow outgoing
 sudo ufw limit 8022/tcp

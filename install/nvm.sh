@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 sudo echo "superuser check" || exit 1
+
 brew install nvm
 mkdir ~/.nvm || true
 export NVM_DIR="$HOME/.nvm"
