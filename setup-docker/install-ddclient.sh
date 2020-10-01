@@ -2,6 +2,9 @@
 
 # includes
 source ../includes/sudo-check.sh
+
+# scripts
+echo "[setup-docker - install-ddclient.sh]"
 docker run \
   -d \
   --name=ddclient \
