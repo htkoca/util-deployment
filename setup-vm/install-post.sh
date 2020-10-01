@@ -8,6 +8,7 @@ echo "[setup-vm - install-post.sh]"
 source ../install-post/homebrew.sh
 source ../install-post/docker.sh
 source ../install-post/git.sh
+source ../install-post/python.sh
 source ../install-post/nvm.sh
 source ../install-post/ufw.sh
 source ../install-post/zsh.sh
