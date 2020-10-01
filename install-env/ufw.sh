@@ -5,4 +5,4 @@ source ../includes/sudo-check.sh
 
 # scripts
 echo "[install - ufw.sh]"
-sudo apt-get -y ufw
+sudo apt-get install -y ufw
