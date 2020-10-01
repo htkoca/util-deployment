@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-sudo echo "superuser check" || exit 1
+# includes
+source ../includes/sudo-check.sh
+
+# scripts
+echo "[install-post - common.sh]"
+sudo deluser --remove-home ubuntu

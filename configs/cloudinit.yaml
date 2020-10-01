@@ -11,14 +11,14 @@ users:
       - sudo
       - docker
     sudo: 
-      - 'ALL=(ALL) NOPASSWD:ALL'
-    passwd: <hash via 'mkpasswd --method=SHA-512 --rounds=4096'>
+      - 'ALL=(ALL) PASSWD:ALL'
+    shell: '/bin/bash'
     ssh_authorized_keys:
-      - <ssh pub key 1>
+      - <ssh pub key>
 
 # Install env
 runcmd:
-  - deluser --remove-home ubuntu
+  - usermod --password $(openssl passwd -1 somepassword) htkoca
   - sed -i -r -e '/^#?Port/s/^.*$/Port 8022/' /etc/ssh/sshd_config
   - sed -i -r -e '/^#?ListenAddress 0.0.0.0/s/^.*$/ListenAddress 0.0.0.0/' /etc/ssh/sshd_config
   - systemctl restart sshd

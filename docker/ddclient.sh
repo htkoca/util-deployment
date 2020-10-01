@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-sudo echo "superuser check" || exit 1
+# includes
+source ../includes/sudo-check.sh
 docker run \
   -d \
   --name=ddclient \

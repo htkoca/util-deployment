@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-sudo echo "superuser check" || exit 1
+# includes
+source ../includes/sudo-check.sh
 
+# scripts
+echo "[install-post - docker.sh]"
 sudo systemctl start docker
 sudo systemctl enable docker

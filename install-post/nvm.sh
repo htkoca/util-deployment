@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-sudo echo "superuser check" || exit 1
+# includes
+source ../includes/sudo-check.sh
 
+# scripts
+echo "[install-post - nvm.sh]"
 mkdir ~/.nvm || true
 echo 'export NVM_DIR="$HOME/.nvm"
   [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm

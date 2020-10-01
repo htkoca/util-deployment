@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-sudo echo "superuser check" || exit 1
+# includes
+source ../includes/sudo-check.sh
 
+# scripts
+echo "[install-post - ufw.sh]"
 echo "y" | sudo ufw reset
 sudo ufw default allow outgoing
 sudo ufw limit 8022/tcp
