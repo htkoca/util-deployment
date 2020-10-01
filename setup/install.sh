@@ -2,4 +2,5 @@
 
 sudo echo "superuser check" || exit 1
 
-sudo apt-get install -y ufw
+source ./install-env.sh
+source ./install-post.sh

@@ -18,8 +18,7 @@ users:
 
 # Install env
 runcmd:
-  - (cd ~ && git clone git@github.com:htkoca/utils-deployment.git)
-  - (cd ~/utils-deployment/scripts/ && ./install.sh)
-  - (cd ~/utils-deployment/scripts/ && ./install-post.sh)
-  - rm -rf ~/utils-deployment
-  - cat /etc/passwd > ~/test.txt
+  - deluser --remove-home ubuntu
+  - sed -i -r -e '/^#?Port/s/^.*$/Port 8022/' /etc/ssh/sshd_config
+  - sed -i -r -e '/^#?ListenAddress 0.0.0.0/s/^.*$/ListenAddress 0.0.0.0/' /etc/ssh/sshd_config
+  - systemctl restart sshd
