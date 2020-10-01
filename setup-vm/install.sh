@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x #echo on
 
 # includes
 source ../includes/sudo-check.sh

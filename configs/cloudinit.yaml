@@ -22,3 +22,4 @@ runcmd:
   - sed -i -r -e '/^#?Port/s/^.*$/Port 8022/' /etc/ssh/sshd_config
   - sed -i -r -e '/^#?ListenAddress 0.0.0.0/s/^.*$/ListenAddress 0.0.0.0/' /etc/ssh/sshd_config
   - systemctl restart sshd
+  - deluser --remove-home ubuntu

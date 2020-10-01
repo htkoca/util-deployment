@@ -5,4 +5,3 @@ source ../includes/sudo-check.sh
 
 # scripts
 echo "[install-post - common.sh]"
-sudo deluser --remove-home ubuntu

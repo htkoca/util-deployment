@@ -8,6 +8,6 @@ docker run \
   -e PUID=1001 \
   -e PGID=1001 \
   -e TZ=America/Toronto \
-  -v /home/htkoca/config/ddclient.conf:/config/ddclient.conf \
+  -v ${PWD}/ddclient.conf:/config/ddclient.conf \
   --restart always \
   linuxserver/ddclient
