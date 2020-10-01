@@ -11,5 +11,6 @@ source ../install-env/docker.sh
 source ../install-env/homebrew.sh
 source ../install-env/nvm.sh
 source ../install-env/ufw.sh
+source ../install-env/zsh.sh
 
 echo "Please do not re-login to your user if running install-post.sh script."
